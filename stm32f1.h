@@ -46,7 +46,7 @@ struct uart {
 
 #define SET_PIN_MODE(gpio, pin, mode)                  \
   do {                                                 \
-    uint32_t shift = ((pin) -8) * 4;                   \
+    uint32_t shift = ((pin) - 8) * 4;                   \
     SET_REG((gpio)->CRH, 0xf << shift, mode << shift); \
   } while (0)
 

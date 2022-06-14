@@ -24,10 +24,10 @@ obj/%.o: %.s
 	$(ARCH)-as $(AFLAGS) $< -o $@
 
 clean:
-	@rm -rf *.{bin,elf,map,lst,tgz,zip,hex} obj
+	rm -rf *.{bin,elf,map,lst,tgz,zip,hex} obj
 
 load: $(TARGET).bin
 	st-flash --reset write $(TARGET).bin 0x08000000
 
 probe:
-	 st-info --probe
+	st-info --probe

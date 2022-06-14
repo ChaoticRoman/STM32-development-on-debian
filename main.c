@@ -3,7 +3,7 @@
 
 #include "stm32f1.h"
 
-static int blink_period = 450000;
+static int blink_period = 50000;
 
 static void setup(void) {
   INIT_MEMORY;
